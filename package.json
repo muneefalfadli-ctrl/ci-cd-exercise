@@ -2,7 +2,7 @@
   "name": "sample-app",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Running dummy tests...\" && exit 0",
+    "test": "echo \"Tests failed! Intentionally returning non-zero exit code.\" && exit 1",
     "lint": "echo \"Running dummy linting...\" && exit 0"
   }
 }

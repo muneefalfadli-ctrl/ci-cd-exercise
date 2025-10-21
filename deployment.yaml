@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ci-cd-app-deployment
+  labels:
+    app: ci-cd-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ci-cd-app
+  template:
+    metadata:
+      labels:
+        app: ci-cd-app
+    spec:
+      containers:
+      - name: ci-cd-app
+        # This will be replaced by the image built in the pipeline
+        image: REPLACE_ME_WITH_YOUR_DOCKER_IMAGE:latest
+        ports:
+        - containerPort: 3000
